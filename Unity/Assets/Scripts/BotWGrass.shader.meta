@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+guid: 0054f74e899a5f64ea1904b227b87d5c
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures:
+  - _BladeTexture: {fileID: 2800000, guid: 99cc2c2a0c73d454799b93e6e744ded4, type: 3}
+  - _GrassMap: {instanceID: 0}
+  - _WindMap: {instanceID: 0}
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
