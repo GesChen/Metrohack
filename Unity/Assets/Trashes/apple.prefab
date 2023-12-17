@@ -150,6 +150,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02e6a4c17f161094991dc7f23da80b21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 3
+  type: 0
   icon: {fileID: 21300000, guid: 8b6eaea8ae5d22848ad8c3dcd8ae2552, type: 3}
   id: 0

@@ -65,7 +65,7 @@ public class PlayerController : MonoBehaviour
         grabIcon.SetActive(grabs.Any(n => n));
         throwHint.SetActive(grabIcon.activeSelf);
 
-        stashHint.SetActive(hoverIcon.activeSelf && inventory.inventory.Count < inventory.numSlots);
+        if (stashHint) stashHint.SetActive(hoverIcon.activeSelf && inventory.inventory.Count < inventory.numSlots);
 
         steps.volume = Mathf.Clamp01(input.sqrMagnitude);
 

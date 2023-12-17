@@ -19,6 +19,7 @@ public class Trash : MonoBehaviour
     bool beingHeld;
     Rigidbody rb;
     PlayerController playerController;
+    int timesFell;
     // Start is called before the first frame update
     void Start()
     {
@@ -55,6 +56,7 @@ public class Trash : MonoBehaviour
             Vector3 targetPoint = Camera.main.transform.position + Camera.main.transform.rotation * Vector3.forward * playerController.holdDistance;
             Vector3 difference = targetPoint - transform.position;
             rb.velocity = difference.normalized * playerController.attractionForce * difference.magnitude;
+            rb.angularDrag = 2f;
 
             if (Input.GetMouseButtonDown(1))
             {
@@ -71,6 +73,11 @@ public class Trash : MonoBehaviour
         {
             transform.position += Vector3.up * 3;
             rb.velocity = Vector3.zero;
+            timesFell++;
+            if (timesFell >= 3)
+            {
+                Destroy(gameObject);
+            }
         }
         if (Input.GetKeyDown(KeyCode.E) && hit.transform == transform && playerController.inventory.inventory.Count < playerController.inventory.numSlots)
         {
